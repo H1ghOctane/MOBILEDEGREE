@@ -110,6 +110,8 @@ bs.accessKey=ключ
 
 <img src="images/logo/img3.png" alt="Тесты в отчёте Allure">
 
+<img src="images/logo/imgg4.png" alt="Несколько графиков Allure">
+
 ## Уведомления в Telegram  
 
 После каждой сборки бот присылает в чат результат прогона и ссылку на отчёт:
