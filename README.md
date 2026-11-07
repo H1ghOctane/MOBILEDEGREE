@@ -103,12 +103,11 @@ bs.accessKey=ключ
 Сборка запускает тесты в BrowserStack. Логин и ключ передаются параметрами `BROWSERSTACK_USERNAME` и `BROWSERSTACK_ACCESS_KEY` и в лог сборки не попадают.
 
 <img src="images/screens/jenkins.png" alt="Сборка в Jenkins">
+<img src="images/logo/img.png" alt="Главная страница отчёта Allure">
 
 ## [Отчёт Allure](https://jenkins.qa.guru/job/MOBILE_H1GHT0CTANE/lastCompletedBuild/allure/)
 
 У каждого теста в отчёте есть шаги, скриншот последнего экрана и видео из BrowserStack.
-
-<img src="images/logo/img.png" alt="Главная страница отчёта Allure">
 
 <img src="images/logo/img3.png" alt="Тесты в отчёте Allure">
 
