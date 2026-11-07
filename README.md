@@ -105,7 +105,7 @@ bs.accessKey=ключ
 <img src="images/screens/jenkins.png" alt="Сборка в Jenkins">
 <img src="images/logo/img.png" alt="Главная страница отчёта Allure">
 
-## [Отчёт Allure](https://jenkins.qa.guru/job/MOBILE_DEGREE/7/allure/index.html/)
+## [Отчёт Allure](https://jenkins.qa.guru/job/MOBILE_DEGREE/7/allure/)
 
 У каждого теста в отчёте есть шаги, скриншот последнего экрана и видео из BrowserStack.
 
