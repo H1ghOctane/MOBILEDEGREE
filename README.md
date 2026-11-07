@@ -131,6 +131,9 @@ bs.accessKey=ключ
 
 
 
-https://github.com/user-attachments/assets/39c64553-bb5f-4f49-8916-2ba668ed2b75
+
+https://github.com/user-attachments/assets/28327262-db77-4443-8a74-1d45371dd6ed
+
+
 
 
