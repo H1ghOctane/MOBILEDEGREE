@@ -121,5 +121,5 @@ bs.accessKey=ключ
 
 <p align="center">
   <img src="images/video/8a1cee5b6e8e1626.mp4" width="300" alt="Прохождение теста в BrowserStack">
-  (https://img.shields.io/badge/▶_Смотреть_видео-Android-green?style=for-the-badge&logo=android)](https://github.com/H1ghOctane/MOBILEREST/issues/2)
 </p>
+[![Посмотреть видео работы android теста](https://img.shields.io/badge/▶_Смотреть_видео-Android-green?style=for-the-badge&logo=android)](https://github.com/H1ghOctane/MOBILEREST/issues/2)
