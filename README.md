@@ -110,7 +110,7 @@ bs.accessKey=ключ
 
 <img src="images/logo/img.png" alt="Главная страница отчёта Allure">
 
-<img src="images/logo/img2.png" alt="Тесты в отчёте Allure">
+<img src="images/logo/img3.png" alt="Тесты в отчёте Allure">
 
 ## Уведомления в Telegram  
 
