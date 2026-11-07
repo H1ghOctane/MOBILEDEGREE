@@ -98,14 +98,14 @@ bs.accessKey=ключ
 | `bs.deviceName` | устройство в BrowserStack | `Samsung Galaxy S22 Ultra` |
 | `bs.osVersion` | версия Android в BrowserStack | `12.0` |
 
-## Сборка в [Jenkins](https://jenkins.qa.guru/job/MOBILE_H1GHT0CTANE/)
+## Сборка в [Jenkins](https://jenkins.qa.guru/job/MOBILE_DEGREE/)
 
 Сборка запускает тесты в BrowserStack. Логин и ключ передаются параметрами `BROWSERSTACK_USERNAME` и `BROWSERSTACK_ACCESS_KEY` и в лог сборки не попадают.
 
 <img src="images/screens/jenkins.png" alt="Сборка в Jenkins">
 <img src="images/logo/img.png" alt="Главная страница отчёта Allure">
 
-## [Отчёт Allure](https://jenkins.qa.guru/job/MOBILE_DEGREE/)
+## [Отчёт Allure](https://jenkins.qa.guru/job/MOBILE_DEGREE/7/allure/index.html/)
 
 У каждого теста в отчёте есть шаги, скриншот последнего экрана и видео из BrowserStack.
 
