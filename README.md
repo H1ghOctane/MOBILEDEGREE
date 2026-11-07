@@ -26,19 +26,6 @@
 
 <a id="cases"></a>
 
-| Назначение | Инструмент | Версия |
-| --- | --- | --- |
-| Язык | Java | 17 |
-| Сборка | Gradle | 8.13 |
-| Тестовый фреймворк | JUnit 5 | 5.13.4 |
-| Работа с приложением | Selenide Appium | 7.18.1 |
-| Драйвер | Appium Java Client | 9.5.0 |
-| Конфигурация | Owner | 1.0.12 |
-| Отчёты | Allure Report | 2.46.1 |
-| Локальный запуск | Appium 2, эмулятор Android Studio | |
-| Удалённый запуск | BrowserStack App Automate | |
-| CI | Jenkins | |
-
 ## Что проверяют тесты
 
 Все тесты в классе `WikipediaSearchTest`:
