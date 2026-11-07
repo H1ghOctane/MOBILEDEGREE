@@ -119,7 +119,8 @@ bs.accessKey=ключ
 
 ## Видео прохождения теста
 
-Тест открытия статьи в BrowserStack.
+Тест открытия статьи Lunux в BrowserStack
+P.S. Ошибка из-за старой версии приложения wiki
 
 <p align="center">
   <img src="images/video/8a1cee5b6e8e1626.mp4" width="300" alt="Прохождение теста в BrowserStack">
@@ -128,7 +129,6 @@ bs.accessKey=ключ
 [![Посмотреть видео работы android теста](https://img.shields.io/badge/▶_Смотреть_видео-Android-green?style=for-the-badge&logo=android)](https://github.com/H1ghOctane/MOBILEREST/issues/2)
 
 https://github.com/user-attachments/assets/c38a13b7-5a04-407a-8ed7-6692712e30eb
-
 
 
 
