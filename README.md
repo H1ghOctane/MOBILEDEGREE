@@ -131,6 +131,11 @@ bs.accessKey=ключ
 
 <img src="images/logo/img2.png" alt="Тесты в отчёте Allure">
 
+## Уведомления в Telegram  
+
+После каждой сборки бот присылает в чат результат прогона и ссылку на отчёт:
+<img src="images/logo/img2.png"
+
 ## Видео прохождения теста
 
 Тест открытия статьи в BrowserStack.
