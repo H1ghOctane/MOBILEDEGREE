@@ -134,7 +134,7 @@ bs.accessKey=ключ
 ## Уведомления в Telegram  
 
 После каждой сборки бот присылает в чат результат прогона и ссылку на отчёт:
-<img src="images/logo/img2.png"
+<img src="images/logo/img2.png" alt="Тесты в отчёте Allure">
 
 ## Видео прохождения теста
 
