@@ -4,7 +4,7 @@
   <a href="https://www.wikipedia.org"><img src="images/logo/wiki.png" alt="Wikipedia"></a>
 </p>
 
-Мобильная часть дипломного проекта QA.GURU. Тесты проверяют поиск в Android-приложении [Wikipedia](https://www.wikipedia.org) и запускаются двумя способами: на эмуляторе Android Studio у себя на компьютере и на реальном устройстве в [BrowserStack](https://www.browserstack.com/app-automate). UI- и API-тесты лежат в репозитории [AVIASALESDEGREE](https://github.com/H1ghOctane/AVIASALESDEGREE).
+Мобильная часть дипломного проекта QA.GURU. Тесты проверяют поиск в Android-приложении [Wikipedia](https://www.wikipedia.org) и запускаются двумя способами: на эмуляторе Android Studio у себя на компьютере и на реальном устройстве в [BrowserStack](https://www.browserstack.com/app-automate). UI- и API-тесты лежат в репозитории [AVIASALESDEGREE](https://github.com/H1ghOctane/AVIASALESDEGREE)
 
 ## Содержание
 
@@ -31,9 +31,9 @@
 Все тесты в классе `WikipediaSearchTest`:
 
 - поиск по запросам «Appium», «Selenium» и «Java» находит статьи (параметризованный тест);
-- в результатах по запросу «Appium» есть статья с таким названием;
+- в результатах по запросу «Appium» есть статья с таким названием
 - статья «Appium» открывается из результатов, и в ней правильный заголовок;
-- после очистки строки поиска список результатов пустеет.
+- после очистки строки поиска список результатов пустеет
 
 ## Структура проекта
 
@@ -49,11 +49,11 @@ src/test
     └── config    local.properties и browserstack.properties
 ```
 
-Тесты работают с приложением только через классы экранов (Screen Object). Способ запуска выбирается параметром `deviceHost`, и каждому способу соответствует свой конфиг.
+Тесты работают с приложением только через классы экранов (Screen Object). Способ запуска выбирается параметром `deviceHost`, и каждому способу соответствует свой конфиг
 
 ## Подготовка к локальному запуску
 
-1. В Android Studio открой Device Manager и создай эмулятор Pixel с Android 11 (API 30). Приложение собрано в 2017 году, на новых версиях Android оно может не установиться.
+1. В Android Studio открой Device Manager и создай эмулятор Pixel с Android 11 (API 30). Приложение собрано в 2017 году, на новых версиях Android оно может не установиться
 2. Установи Appium 2 и драйвер UiAutomator2:
 
    ```bash
@@ -61,8 +61,8 @@ src/test
    appium driver install uiautomator2
    ```
 
-3. Положи APK приложения в `src/test/resources/apps/WikipediaSample.apk`. Это демо-сборка Wikipedia из документации BrowserStack App Automate, та же, что загружена в BrowserStack. В репозиторий APK не коммитится.
-4. Запусти эмулятор, затем в отдельном терминале команду `appium`. Команда `adb devices` должна показать эмулятор. Если его имя отличается от `emulator-5554`, поправь `local.deviceName` в `src/test/resources/config/local.properties`.
+3. Положи APK приложения в `src/test/resources/apps/WikipediaSample.apk`. Это демо-сборка Wikipedia из документации BrowserStack App Automate, та же, что загружена в BrowserStack. В репозиторий APK не коммитится
+4. Запусти эмулятор, затем в отдельном терминале команду `appium`. Команда `adb devices` должна показать эмулятор. Если его имя отличается от `emulator-5554`, поправь `local.deviceName` в `src/test/resources/config/local.properties`
 
 ## Запуск
 
@@ -78,7 +78,7 @@ src/test
 ./gradlew clean test -DdeviceHost=browserstack
 ```
 
-Без параметра `deviceHost` тесты запускаются на эмуляторе.
+Без параметра `deviceHost` тесты запускаются на эмуляторе
 
 Для BrowserStack нужны логин и ключ доступа. Положи их в файл `browserstack.properties` в домашней папке, вне репозитория:
 
@@ -87,7 +87,7 @@ bs.username=логин
 bs.accessKey=ключ
 ```
 
-В `src/test/resources/config/browserstack.properties` лежат только устройство, версия Android и ссылка на загруженное приложение, секретов там нет.
+В `src/test/resources/config/browserstack.properties` лежат только устройство, версия Android и ссылка на загруженное приложение, секретов там нет
 
 | Параметр | Что задаёт | По умолчанию |
 | --- | --- | --- |
@@ -100,13 +100,13 @@ bs.accessKey=ключ
 
 ## Сборка в [Jenkins](https://jenkins.qa.guru/job/MOBILE_DEGREE/)
 
-Сборка запускает тесты в BrowserStack. Логин и ключ передаются параметрами `BROWSERSTACK_USERNAME` и `BROWSERSTACK_ACCESS_KEY` и в лог сборки не попадают.
+Сборка запускает тесты в BrowserStack. Логин и ключ передаются параметрами `BROWSERSTACK_USERNAME` и `BROWSERSTACK_ACCESS_KEY` и в лог сборки не попадают
 
 <img src="images/logo/img.png" alt="Главная страница отчёта Allure">
 
 ## [Отчёт Allure](https://jenkins.qa.guru/job/MOBILE_DEGREE/7/allure/)
 
-У каждого теста в отчёте есть шаги, скриншот последнего экрана и видео из BrowserStack.
+У каждого теста в отчёте есть шаги, скриншот последнего экрана и видео из BrowserStack
 
 <img src="images/logo/img3.png" alt="Тесты в отчёте Allure">
 
