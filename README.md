@@ -127,14 +127,14 @@ bs.accessKey=ключ
 
 У каждого теста в отчёте есть шаги, скриншот последнего экрана и видео из BrowserStack.
 
-<img src="images/screens/allure-overview.png" alt="Главная страница отчёта Allure">
+<img src="images/logo/img.png" alt="Главная страница отчёта Allure">
 
-<img src="images/screens/allure-tests.png" alt="Тесты в отчёте Allure">
+<img src="images/logo/img2.png" alt="Тесты в отчёте Allure">
 
 ## Видео прохождения теста
 
 Тест открытия статьи в BrowserStack.
 
 <p align="center">
-  <img src="images/video/mobile-test.gif" width="300" alt="Прохождение теста в BrowserStack">
+  <img src="images/video/8a1cee5b6e8e1626.mp4" width="300" alt="Прохождение теста в BrowserStack">
 </p>
