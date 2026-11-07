@@ -128,3 +128,9 @@ bs.accessKey=ключ
 [![Посмотреть видео работы android теста](https://img.shields.io/badge/▶_Смотреть_видео-Android-green?style=for-the-badge&logo=android)](https://github.com/H1ghOctane/MOBILEDEGREE/issues/1)
 
 [![Посмотреть видео работы android теста](https://img.shields.io/badge/▶_Смотреть_видео-Android-green?style=for-the-badge&logo=android)](https://github.com/H1ghOctane/MOBILEREST/issues/2)
+
+
+
+https://github.com/user-attachments/assets/39c64553-bb5f-4f49-8916-2ba668ed2b75
+
+
