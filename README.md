@@ -1,7 +1,7 @@
 <h1 align="center">Мобильные автотесты для <a href="https://www.wikipedia.org">Wikipedia</a></h1>
 
 <p align="center">
-  <a href="https://www.wikipedia.org"><img src="images/logo/Wikipedia.svg" width="160" alt="Wikipedia"></a>
+  <a href="https://www.wikipedia.org"><img src="images/logo/wiki.png" alt="Wikipedia"></a>
 </p>
 
 Мобильная часть дипломного проекта QA.GURU. Тесты проверяют поиск в Android-приложении [Wikipedia](https://www.wikipedia.org) и запускаются двумя способами: на эмуляторе Android Studio у себя на компьютере и на реальном устройстве в [BrowserStack](https://www.browserstack.com/app-automate). UI- и API-тесты лежат в репозитории [AVIASALESDEGREE](https://github.com/H1ghOctane/AVIASALESDEGREE).
