@@ -1,14 +1,14 @@
 <h1 align="center">Мобильные автотесты для <a href="https://www.wikipedia.org">Wikipedia</a></h1>
 
 <p align="center">
-  <a href="https://www.wikipedia.org"><img src="images/logo/Wikipedia.svg" width="160" alt="Wikipedia"></a>
+  <a href="https://www.wikipedia.org"><img src="images/logo/wiki.png" alt="Wikipedia"></a>
 </p>
 
 Мобильная часть дипломного проекта QA.GURU. Тесты проверяют поиск в Android-приложении [Wikipedia](https://www.wikipedia.org) и запускаются двумя способами: на эмуляторе Android Studio у себя на компьютере и на реальном устройстве в [BrowserStack](https://www.browserstack.com/app-automate). UI- и API-тесты лежат в репозитории [AVIASALESDEGREE](https://github.com/H1ghOctane/AVIASALESDEGREE).
 
 ## Содержание
 
-- [Стек](#стек)
+- [Технологии и инструменты](#технологии-и-инструменты)
 - [Что проверяют тесты](#что-проверяют-тесты)
 - [Структура проекта](#структура-проекта)
 - [Подготовка к локальному запуску](#подготовка-к-локальному-запуску)
@@ -17,33 +17,14 @@
 - [Отчёт Allure](#отчёт-allure)
 - [Видео прохождения теста](#видео-прохождения-теста)
 
-## Стек
+<a id="tools"></a>
+## Технологии и инструменты:
 
-<p align="center">
-  <img width="6%" title="Java" src="images/logo/Java.svg">
-  <img width="6%" title="IntelliJ IDEA" src="images/logo/Idea.svg">
-  <img width="6%" title="Gradle" src="images/logo/Gradle.svg">
-  <img width="6%" title="JUnit 5" src="images/logo/Junit5.svg">
-  <img width="6%" title="Selenide" src="images/logo/Selenide.svg">
-  <img width="6%" title="Appium" src="images/logo/Appium.svg">
-  <img width="6%" title="Android Studio" src="images/logo/Android_Studio.svg">
-  <img width="6%" title="BrowserStack" src="images/logo/Browserstack.svg">
-  <img width="6%" title="Allure Report" src="images/logo/Allure.svg">
-  <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
-</p>
+| Java                                                                                                      | IntelliJ  <br>  Idea                                                                                               | GitHub                                                                                                     | JUnit 5                                                                                                           | Gradle                                                                                                     | Selenide                                                                                                         | Selenoid                                                                                                                  | Allure <br> Report                                                                                                         |  Jenkins                                                                                                        |   Jira                                                                                                              | Telegram                                                                                                            |Allure <br> TestOps                                                                                                          
+|:----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------:|
+| <a href="https://www.java.com/"><img src="images/logo/Java.svg" width="50" height="50"  alt="Java"/></a>  | <a href="https://www.jetbrains.com/idea/"><img src="images/logo/Idea.svg" width="50" height="50"  alt="IDEA"/></a> | <a href="https://github.com/"><img src="images/logo/GitHub.svg" width="50" height="50"  alt="Github"/></a> | <a href="https://junit.org/junit5/"><img src="images/logo/Junit5.svg" width="50" height="50"  alt="JUnit 5"/></a> | <a href="https://gradle.org/"><img src="images/logo/Gradle.svg" width="50" height="50"  alt="Gradle"/></a> | <a href="https://selenide.org/"><img src="images/logo/Selenide.svg" width="50" height="50"  alt="Selenide"/></a> | <a href="https://aerokube.com/selenoid/"><img src="images/logo/Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a> | <a href="https://github.com/allure-framework"><img src="images/logo/Allure.svg" width="50" height="50"  alt="Allure"/></a> |<a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a> | <a href="https://www.atlassian.com/software/jira/"><img src="images/logo/Jira.svg" width="50" height="50" alt="Java" title="Java"/></a> | <a href="https://web.telegram.org/"><img src="images\logo\Telegram.svg" width="50" height="50" alt="Telegram"/></a> |<a href="https://qameta.io/"><img src="images\logo\Allure_TO.svg" width="50" height="50" alt="Allure_TO"/></a> |
 
-| Назначение | Инструмент | Версия |
-| --- | --- | --- |
-| Язык | Java | 17 |
-| Сборка | Gradle | 8.13 |
-| Тестовый фреймворк | JUnit 5 | 5.13.4 |
-| Работа с приложением | Selenide Appium | 7.18.1 |
-| Драйвер | Appium Java Client | 9.5.0 |
-| Конфигурация | Owner | 1.0.12 |
-| Отчёты | Allure Report | 2.46.1 |
-| Локальный запуск | Appium 2, эмулятор Android Studio | |
-| Удалённый запуск | BrowserStack App Automate | |
-| CI | Jenkins | |
+<a id="cases"></a>
 
 ## Что проверяют тесты
 
@@ -127,14 +108,19 @@ bs.accessKey=ключ
 
 У каждого теста в отчёте есть шаги, скриншот последнего экрана и видео из BrowserStack.
 
-<img src="images/screens/allure-overview.png" alt="Главная страница отчёта Allure">
+<img src="images/logo/img.png" alt="Главная страница отчёта Allure">
 
-<img src="images/screens/allure-tests.png" alt="Тесты в отчёте Allure">
+<img src="images/logo/img2.png" alt="Тесты в отчёте Allure">
+
+## Уведомления в Telegram  
+
+После каждой сборки бот присылает в чат результат прогона и ссылку на отчёт:
+<img src="images/logo/img2.png" alt="Тесты в отчёте Allure">
 
 ## Видео прохождения теста
 
 Тест открытия статьи в BrowserStack.
 
 <p align="center">
-  <img src="images/video/mobile-test.gif" width="300" alt="Прохождение теста в BrowserStack">
+  <img src="images/video/8a1cee5b6e8e1626.mp4" width="300" alt="Прохождение теста в BrowserStack">
 </p>
