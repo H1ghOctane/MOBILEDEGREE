@@ -1,0 +1,68 @@
+plugins {
+    id 'java-library'
+    id 'io.qameta.allure' version '4.3.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+def aspectjWeaverVersion = "1.9.25"
+def restAssuredVersion = "5.5.6"
+def allureAdaptersVersion = "2.35.5"
+def allureReportVersion = "2.46.1"
+def junitVersion = "5.13.4"
+def slf4jVersion = "2.0.20"
+def appiumVersion = "9.5.0"
+def ownerVersion = "1.0.12"
+
+allure {
+    version.set(allureReportVersion)
+    adapter {
+        allureJavaVersion.set(allureAdaptersVersion)
+        aspectjWeaver.set(true)
+        aspectjVersion.set(aspectjWeaverVersion)
+    }
+}
+
+dependencies {
+    testImplementation(
+            "org.aspectj:aspectjweaver:$aspectjWeaverVersion",
+            "com.codeborne:selenide:7.18.1",
+            "com.codeborne:selenide-appium:7.18.1",
+            "io.qameta.allure:allure-selenide:$allureAdaptersVersion",
+            "io.appium:java-client:$appiumVersion",
+            "io.rest-assured:rest-assured:$restAssuredVersion",
+            "org.junit.jupiter:junit-jupiter:$junitVersion",
+            "org.aeonbits.owner:owner:$ownerVersion",
+            "org.slf4j:slf4j-simple:$slf4jVersion"
+    )
+    testRuntimeOnly "org.junit.platform:junit-platform-launcher"
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Test) {
+    useJUnitPlatform()
+    systemProperties(System.getProperties())
+
+    def secretsFromEnv = [
+            'BROWSERSTACK_USERNAME'  : 'bs.username',
+            'BROWSERSTACK_ACCESS_KEY': 'bs.accessKey'
+    ]
+    secretsFromEnv.each { envName, propertyName ->
+        def value = System.getenv(envName)
+        if (value) {
+            systemProperty propertyName, value
+        }
+    }
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat = "short"
+        }
+    }
+}
