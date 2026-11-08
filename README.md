@@ -139,10 +139,6 @@ bs.accessKey=ключ
 Тест открытия статьи Lunux в BrowserStack
 P.S. Ошибка из-за старой версии приложения wiki
 
-<p align="center">
-  <img src="images/video/8a1cee5b6e8e1626.mp4" width="300" alt="Прохождение теста в BrowserStack">
-</p>
-
 
 https://github.com/user-attachments/assets/c38a13b7-5a04-407a-8ed7-6692712e30eb
 
