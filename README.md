@@ -113,7 +113,21 @@ bs.accessKey=ключ
 
 <img src="images/logo/img3.png" alt="Тесты в отчёте Allure">
 
+<img src="images/logo/imgTests.png" alt="Тесты в отчёте Allure">
+
 <img src="images/logo/imgg4.png" alt="Несколько графиков Allure">
+
+## Интеграция [AllureTestOps](https://allure.qa.guru/launch/56889)
+
+<img src="images/logo/TetsOpsG.png" alt="Графики в отчёте AllureTestOps">
+
+Автоматизированные и ручные тест-кейсы:
+<img src="images/logo/testsK.png" alt="Тест-кейсы в отчёте AllureTestOps">
+
+
+## Интеграция с [Jira](https://jira.qa.guru/browse/NEWAPP-8)
+
+<img src="images/logo/imgJira.png" alt="Задача Jira">
 
 ## Уведомления в Telegram  
 
