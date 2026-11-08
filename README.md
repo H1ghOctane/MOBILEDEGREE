@@ -4,7 +4,7 @@
   <a href="https://www.wikipedia.org"><img src="images/logo/wiki.png" alt="Wikipedia"></a>
 </p>
 
-Мобильная часть дипломного проекта QA.GURU. Тесты проверяют поиск в Android-приложении [Wikipedia](https://www.wikipedia.org) и запускаются двумя способами: на эмуляторе Android Studio у себя на компьютере и на реальном устройстве в [BrowserStack](https://www.browserstack.com/app-automate). UI- и API-тесты лежат в репозитории [AVIASALESDEGREE](https://github.com/H1ghOctane/AVIASALESDEGREE).
+Мобильная часть дипломного проекта QA.GURU. Тесты проверяют поиск в Android-приложении [Wikipedia](https://www.wikipedia.org) и запускаются двумя способами: на эмуляторе Android Studio у себя на компьютере и на реальном устройстве в [BrowserStack](https://www.browserstack.com/app-automate). UI- и API-тесты лежат в репозитории [AVIASALESDEGREE](https://github.com/H1ghOctane/AVIASALESDEGREE)
 
 ## Содержание
 
@@ -15,6 +15,9 @@
 - [Запуск](#запуск)
 - [Сборка в Jenkins](#сборка-в-jenkins)
 - [Отчёт Allure](#отчёт-allure)
+- [Интеграция AllureTestOps](#интеграция-alluretestops)
+- [Интеграция с Jira](#интеграция-с-jira)
+- [Уведомления в Telegram](#уведомления-в-telegram)
 - [Видео прохождения теста](#видео-прохождения-теста)
 
 <a id="tools"></a>
@@ -31,9 +34,9 @@
 Все тесты в классе `WikipediaSearchTest`:
 
 - поиск по запросам «Appium», «Selenium» и «Java» находит статьи (параметризованный тест);
-- в результатах по запросу «Appium» есть статья с таким названием;
+- в результатах по запросу «Appium» есть статья с таким названием
 - статья «Appium» открывается из результатов, и в ней правильный заголовок;
-- после очистки строки поиска список результатов пустеет.
+- после очистки строки поиска список результатов пустеет
 
 ## Структура проекта
 
@@ -49,11 +52,11 @@ src/test
     └── config    local.properties и browserstack.properties
 ```
 
-Тесты работают с приложением только через классы экранов (Screen Object). Способ запуска выбирается параметром `deviceHost`, и каждому способу соответствует свой конфиг.
+Тесты работают с приложением только через классы экранов (Screen Object). Способ запуска выбирается параметром `deviceHost`, и каждому способу соответствует свой конфиг
 
 ## Подготовка к локальному запуску
 
-1. В Android Studio открой Device Manager и создай эмулятор Pixel с Android 11 (API 30). Приложение собрано в 2017 году, на новых версиях Android оно может не установиться.
+1. В Android Studio открой Device Manager и создай эмулятор Pixel с Android 11 (API 30). Приложение собрано в 2017 году, на новых версиях Android оно может не установиться
 2. Установи Appium 2 и драйвер UiAutomator2:
 
    ```bash
@@ -61,8 +64,8 @@ src/test
    appium driver install uiautomator2
    ```
 
-3. Положи APK приложения в `src/test/resources/apps/WikipediaSample.apk`. Это демо-сборка Wikipedia из документации BrowserStack App Automate, та же, что загружена в BrowserStack. В репозиторий APK не коммитится.
-4. Запусти эмулятор, затем в отдельном терминале команду `appium`. Команда `adb devices` должна показать эмулятор. Если его имя отличается от `emulator-5554`, поправь `local.deviceName` в `src/test/resources/config/local.properties`.
+3. Положи APK приложения в `src/test/resources/apps/WikipediaSample.apk`. Это демо-сборка Wikipedia из документации BrowserStack App Automate, та же, что загружена в BrowserStack. В репозиторий APK не коммитится
+4. Запусти эмулятор, затем в отдельном терминале команду `appium`. Команда `adb devices` должна показать эмулятор. Если его имя отличается от `emulator-5554`, поправь `local.deviceName` в `src/test/resources/config/local.properties`
 
 ## Запуск
 
@@ -78,7 +81,7 @@ src/test
 ./gradlew clean test -DdeviceHost=browserstack
 ```
 
-Без параметра `deviceHost` тесты запускаются на эмуляторе.
+Без параметра `deviceHost` тесты запускаются на эмуляторе
 
 Для BrowserStack нужны логин и ключ доступа. Положи их в файл `browserstack.properties` в домашней папке, вне репозитория:
 
@@ -87,7 +90,7 @@ bs.username=логин
 bs.accessKey=ключ
 ```
 
-В `src/test/resources/config/browserstack.properties` лежат только устройство, версия Android и ссылка на загруженное приложение, секретов там нет.
+В `src/test/resources/config/browserstack.properties` лежат только устройство, версия Android и ссылка на загруженное приложение, секретов там нет
 
 | Параметр | Что задаёт | По умолчанию |
 | --- | --- | --- |
@@ -98,29 +101,39 @@ bs.accessKey=ключ
 | `bs.deviceName` | устройство в BrowserStack | `Samsung Galaxy S22 Ultra` |
 | `bs.osVersion` | версия Android в BrowserStack | `12.0` |
 
-## Сборка в [Jenkins](https://jenkins.qa.guru/job/MOBILE_H1GHT0CTANE/)
+## Сборка в [Jenkins](https://jenkins.qa.guru/job/MOBILE_DEGREE/)
 
-Сборка запускает тесты в BrowserStack. Логин и ключ передаются параметрами `BROWSERSTACK_USERNAME` и `BROWSERSTACK_ACCESS_KEY` и в лог сборки не попадают.
-
-<img src="images/screens/jenkins.png" alt="Сборка в Jenkins">
-
-## [Отчёт Allure](https://jenkins.qa.guru/job/MOBILE_H1GHT0CTANE/lastCompletedBuild/allure/)
-
-У каждого теста в отчёте есть шаги, скриншот последнего экрана и видео из BrowserStack.
+Сборка запускает тесты в BrowserStack. Логин и ключ передаются параметрами `BROWSERSTACK_USERNAME` и `BROWSERSTACK_ACCESS_KEY` и в лог сборки не попадают
 
 <img src="images/logo/img.png" alt="Главная страница отчёта Allure">
 
-<img src="images/logo/img2.png" alt="Тесты в отчёте Allure">
+## [Отчёт Allure](https://jenkins.qa.guru/job/MOBILE_DEGREE/7/allure/)
+
+У каждого теста в отчёте есть шаги, скриншот последнего экрана и видео из BrowserStack
+
+<img src="images/logo/img3.png" alt="Тесты в отчёте Allure">
+
+<img src="images/logo/imgg4.png" alt="Несколько графиков Allure">
 
 ## Уведомления в Telegram  
 
 После каждой сборки бот присылает в чат результат прогона и ссылку на отчёт:
-<img src="images/logo/img2.png" alt="Тесты в отчёте Allure">
+<img src="images/logo/img2.png" alt="Отчет в телеграмм">
 
 ## Видео прохождения теста
 
-Тест открытия статьи в BrowserStack.
+Тест открытия статьи Lunux в BrowserStack
+P.S. Ошибка из-за старой версии приложения wiki
 
 <p align="center">
   <img src="images/video/8a1cee5b6e8e1626.mp4" width="300" alt="Прохождение теста в BrowserStack">
 </p>
+
+[![Посмотреть видео работы android теста](https://img.shields.io/badge/▶_Смотреть_видео-Android-green?style=for-the-badge&logo=android)](https://github.com/H1ghOctane/MOBILEREST/issues/2)
+
+https://github.com/user-attachments/assets/c38a13b7-5a04-407a-8ed7-6692712e30eb
+
+
+
+
+
